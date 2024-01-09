@@ -126,6 +126,14 @@ body {
   color: var(--clr-primary-400);
 }
 
+p:not([class]) {
+  opacity: 0.7;
+  max-width: 32ch;
+}
+p[data-width="wide"] {
+  max-width: 42ch;
+}
+
 .button {
   border: 0;
   display: inline-flex;
@@ -263,6 +271,31 @@ body {
   }
 }
 
+/* cta */
+
+.cta {
+  position: relative;
+  isolation: isolate;
+  text-align: center;
+}
+
+@media (min-width: 50em) {
+  .cta {
+    text-align: left;
+  }
+}
+
+.cta::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background-image: url("images/bg-tablet-pattern.svg"), url("images/bg-tablet-pattern.svg");
+  background-position: -15rem -5rem, 80rem -42em;
+  background-repeat: no-repeat;
+  opacity: 0.1;
+}
+
 /* utility classes */
 
 .visually-hidden {
@@ -377,7 +410,6 @@ body {
 .container {
   --max-width: 1110px;
   --padding: 1rem;
-
   width: min(var(--max-width), 100% - var(--padding) * 2);
   margin-inline: auto;
 }
@@ -392,4 +424,22 @@ body {
     grid-auto-flow: column;
     grid-auto-columns: 1fr;
   }
+}
+
+.vertical-align-center {
+  align-items: center;
+}
+
+.justify-self-end {
+  justify-self: end;
+}
+
+@media (min-width: 50em) {
+  .justify-self-end-md {
+    justify-self: end;
+  }
+}
+
+:where(.flow :not(:first-child)) {
+  margin-top: var(--flow-spacer, 3em);
 }
