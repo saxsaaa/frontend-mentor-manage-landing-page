@@ -10,7 +10,7 @@ Welcome to my submission for the "Manage Landing Page" challenge from Frontend M
 
 
 ## Challenge Details
-- **Challenge Link**: <a href="https://www.frontendmentor.io/challenges/manage-landing-page-SLXqC6P5" target="_blank">Manage Landing Page Challenge</a>
+- **Challenge Link**: [Manage Landing Page Challenge](https://www.frontendmentor.io/challenges/manage-landing-page-SLXqC6P5)
 - **Difficulty Level**: Intermediate
 - **Design Files**: Provided by Frontend Mentor, including design specifications and image assets.
 
