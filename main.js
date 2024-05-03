@@ -1,3 +1,5 @@
+import Lenis from "lenis";
+
 const primaryHeader = document.querySelector(".primary-header");
 const navToggle = document.querySelector(".mobile-nav-toggle");
 const primaryNav = document.querySelector(".primary-navigation");
@@ -28,3 +30,16 @@ var swiper = new Swiper(".mySwiper", {
     },
   },
 });
+
+const lenis = new Lenis();
+
+lenis.on("scroll", (e) => {
+  console.log(e);
+});
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
